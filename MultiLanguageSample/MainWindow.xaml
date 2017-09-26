@@ -19,7 +19,7 @@
 			</Grid.ColumnDefinitions>
 			<TextBlock Grid.Column="0" FontSize="18" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5,5,5,5"
 				Text="{Binding Source={x:Static local:ResourceService.Current}, Path=Resources.SelectLanguage, Mode=OneWay}"/>
-			<ComboBox Grid.Column="1" SelectedIndex="{Binding LanguageIndex, UpdateSourceTrigger=PropertyChanged}" Width="80" Height="24"
+			<ComboBox Grid.Column="1" SelectedIndex="{Binding LanguageIndex}" Width="80" Height="24"
 					HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,5,5,5"
 					SelectionChanged="ComboBox_SelectionChanged">
 				<ComboBoxItem Content="日本語"/>
