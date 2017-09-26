@@ -3,7 +3,7 @@ using System.ComponentModel;
 using System.Globalization;
 using System.Runtime.CompilerServices;
 
-namespace WsGH {
+namespace MultiLanguageSample {
 	public class ResourceService : INotifyPropertyChanged {
 		#region シングルトン対策
 		private static readonly ResourceService current = new ResourceService();

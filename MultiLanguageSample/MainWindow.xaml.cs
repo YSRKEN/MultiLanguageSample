@@ -20,6 +20,18 @@ namespace MultiLanguageSample {
 	public partial class MainWindow : Window {
 		public MainWindow() {
 			InitializeComponent();
+			DataContext = new MainWindowModel() { LanguageIndex = 0 };
+		}
+
+		private string[] CultureList = { "ja-JP", "en-US", "zh-CN" };
+
+		private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e) {
+			var bindData = DataContext as MainWindowModel;
+			ResourceService.Current.ChangeCulture(CultureList[bindData.LanguageIndex]);
+		}
+
+		class MainWindowModel {
+			public int LanguageIndex { get; set; }
 		}
 	}
 }
